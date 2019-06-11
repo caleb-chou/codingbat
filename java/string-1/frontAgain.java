@@ -3,11 +3,6 @@
  * string also appear at the end of the string, such as with "edited".
  */
  
- public boolean frontAgain(String str) {
-  if(str.length() > 1) {
-    if(str.substring(0, 2).equals(str.substring(str.length() - 2, str.length())))
-      return true;
-    return false;
- }
- return false;
+public boolean frontAgain(String s) {
+  return s.length()>=2&&(s.substring(s.length()-2).equals(s.substring(0,2)));
 }

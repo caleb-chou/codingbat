@@ -4,11 +4,6 @@
  * missing chars.
  */
  
-public String atFirst(String str) {
-  if(str.length() == 1) {
-    return str + "@";
-  } else if(str.length() == 0) {
-    return "@@";
-  }
-  return str.substring(0, 2);
+public String atFirst(String in) {
+  return(in.length()>=2) ? in.substring(0,2):(in.length()==0)?"@@":in+"@";
 }

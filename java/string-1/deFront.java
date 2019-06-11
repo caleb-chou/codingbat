@@ -4,14 +4,7 @@
  * it is 'b'. The string may be any length. Harder than it looks.
  */
  
-public String deFront(String str) {    
-  String output = "";
-  if(str.length() > 1) {
-    if(str.substring(0,1).equals("a"))
-      output += "a";
-    if(str.substring(1,2).equals("b"))
-      output += "b";
-    return output + str.substring(2, str.length());
-  }
-  return str;
+public String deFront(String in) {    
+  return (in.charAt(0)=='a') ? ((in.charAt(1)=='b') ? in:in.charAt(0) + in.substring(2)):((in.charAt(1)=='b') ? in.substring(1):in.substring(2));
 }
+

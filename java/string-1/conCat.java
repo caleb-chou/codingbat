@@ -5,10 +5,6 @@
  * "abcat".
  */
 
-public String conCat(String strA, String strB) {
-  if(!(strA.length() == 0 || strB.length() == 0) && strA.substring(strA.length() - 1, strA.length()).equals(strB.substring(0, 1))) {
-    return strA + strB.substring(1, strB.length());
-  } else {
-    return strA + strB;
-  }
+public String conCat(String a, String b) {
+  return (a.length()!=0&&b.length()!=0&&a.charAt(a.length()-1)==b.charAt(0)) ? a+b.substring(1):a+b;
 }

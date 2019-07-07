@@ -7,17 +7,5 @@
  */
 
 public int countYZ(String str) {
-  int count = 0;
- 
-  for(int i = 0; i < str.length(); i++) {
-    String curr = str.substring(i, i+1).toLowerCase();
-    
-    if(i != 0 && !Character.isLetter(str.charAt(i))) {
-      String prev = str.substring(i-1, i).toLowerCase();
-      if(prev.equals("y") || prev.equals("z")) count++;
-    }
-    
-    if(i == str.length() - 1 && (curr.equals("y") || curr.equals("z"))) count++;
-  }
-  return count;
+  return str.length() - str.replaceAll("(y|Y)(?![a-zA-Z])|(z|Z)(?![a-zA-Z])","").length();
 }

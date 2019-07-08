@@ -7,12 +7,10 @@
  */
  
 public int sumDigits(String str) {
-  String strNum = "0123456789";
+  if(str.equals("")) return 0;
   int sum = 0;
-  
-  for(int i = 0; i < str.length(); i++) {
-    if(strNum.contains(str.substring(i, i+1)))
-      sum += Integer.parseInt(str.substring(i, i+1));
-  }
+  String[] temp = str.replaceAll("[^0-9]", "0").split("");
+  for(String s : temp) sum+= Integer.parseInt(s);
   return sum;
 }
+

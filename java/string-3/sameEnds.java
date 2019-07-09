@@ -1,3 +1,4 @@
+
 /* 
  * Given a string, look for a mirror image (backwards) string 
  * at both the beginning and end of the given string. In other
@@ -12,10 +13,8 @@ public String sameEnds(String string) {
   String strB = "";
   boolean same = strA.equals(strB);
   int idx = 0;
-  String temp = "";
 
   for(int i = 0; i < string.length(); i++) {
-     temp = strA;
     if(same) {
       strA = string.substring(0, idx);
       strB = string.substring(string.length() - idx);
@@ -24,6 +23,5 @@ public String sameEnds(String string) {
       break;
     }
   }
-
-  return temp;
+  return strA;
 }

@@ -8,22 +8,10 @@
  * has the mirror end "ab".
  */
  
-public static String sameEnds(String string) {
-      String strA = "";
-      String strB = "";
-      String temp = "";
-    
-      for(int i = 0; i < string.length(); i++) {
-        if(strA.equals(strB)) {
-          temp = strA;
-          strA = string.substring(0, i);
-          System.out.println("A: " + strA);
-          strB = string.substring(string.length() - i);
-          System.out.println("B: " + strB);
-        } else {
-            System.out.println("broke");
-          break;
-        }
-      }
-      return strA;
-    }
+public String sameEnds(String string) {
+  String returnme = "";
+  for(int i = 1; i < string.length()/2 + 1; i++)
+    if(string.substring(0,i).equals(string.substring(string.length()-i))) 
+      returnme = string.substring(0,i);
+  return returnme;
+}

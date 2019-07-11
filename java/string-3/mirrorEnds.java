@@ -8,13 +8,11 @@
  */
  
 public String mirrorEnds(String string) {
-  String strA = "";
-  String strB = "";
+  String forward = "",backward = "";
   for(int i = 0; i < string.length(); i++) {
-    if(!strA.equals(strB)) break;
-    strA += string.substring(i, i+1);
-    strB += string.substring(string.length() - i - 1, string.length() - i);
+    if(!forward.equals(backward)) return forward.substring(0,i-1);
+    forward += string.charAt(i);
+    backward+= string.charAt(string.length()-1-i);
   }
-  if(strA.equals(strB)) return strA;
-  return strA.substring(0, strA.length() - 1);
+  return forward;
 }

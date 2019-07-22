@@ -8,3 +8,4 @@ public int scoresAverage(int[] scores) {
   sum2/=scores.length/2;
   return (sum1 > sum2) ? sum1 : sum2;
 }
+

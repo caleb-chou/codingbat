@@ -2,7 +2,7 @@ public int[] copyEndy(int[] nums, int count) {
   int[] output = new int[count];
   int ct = 0;
   
-  for(int n: nums) {
+  for(int n : nums) {
     if(isEndy(n) && ct < count) {
       output[ct] = n;
       ct++;

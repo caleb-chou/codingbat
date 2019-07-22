@@ -3,11 +3,10 @@ public int scoresSpecial(int[] a, int[] b) {
 }
 
 public int largestSpecial(int[] a) {
-    int largest = 0, temp = 0;
+    int max = 0, temp = 0;
     
     for(int n : a) {
-      if(n % 10 == 0) temp  = n;
-      largest = (largest > temp) ? largest : temp;  
+      if(n % 10 == 0 && n > max) max = n;
     }
-  return largest;
+  return max;
 }
